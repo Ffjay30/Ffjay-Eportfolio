@@ -73,12 +73,13 @@ const projects = [
     description:
       "Developed an applicant deployment system to automate registration, screening, and deployment processes through centralized and organized data management.",
     tags: [
-  "Java",
-  "Java Swing",
-  "AWT",
-  "MySQL / SQLite",
-
-],
+      "Java",
+      "Java Swing",
+      "AWT",
+      "JDBC",
+      "MySQL / SQLite",
+      "Apache NetBeans",
+    ],
     image: "/projects/project1.png",
     link: "#",
     github: "#",
@@ -99,10 +100,12 @@ export const Projects = () => {
           <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase animate-fade-in">
             Featured Projects
           </span>
+
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground leading-tight animate-fade-in animation-delay-100">
             Projects built through innovation, research, and practical system
             development
           </h2>
+
           <p className="text-muted-foreground text-base md:text-lg animate-fade-in animation-delay-200">
             A collection of academic and technical projects that highlight my
             skills in AI, software development, embedded systems, database
@@ -136,7 +139,7 @@ export const Projects = () => {
               <img
                 src={featuredProject.image}
                 alt={featuredProject.title}
-                className="w-full h-[520px] md:h-[620px] object-cover"
+                className="block w-full h-[520px] md:h-[620px] object-cover"
               />
             </div>
           </div>
@@ -226,35 +229,16 @@ export const Projects = () => {
             {projects.slice(1).map((project, idx) => (
               <div
                 key={idx}
-                className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
+                className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                {/* Big Image */}
-          <div className="relative overflow-hidden rounded-b-none">
-  <img
-    src={project.image}
-    alt={project.title}
-    className="w-full h-72 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-  />
+                <div className="overflow-hidden bg-muted">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="block w-full h-[280px] md:h-[320px] object-cover"
+                  />
+                </div>
 
-  {/* dark gradient overlay */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-
-  {/* badge on top-left */}
-  <div className="absolute top-4 left-4">
-    <span className="inline-flex items-center rounded-full bg-sky-500 text-black px-4 py-2 text-[11px] font-bold uppercase tracking-[0.28em]">
-      Project
-    </span>
-  </div>
-
-  {/* title over image */}
-  <div className="absolute bottom-4 left-4 right-4">
-    <h4 className="text-white text-2xl md:text-3xl font-extrabold leading-tight drop-shadow-md">
-      {project.title}
-    </h4>
-  </div>
-</div>
-
-                {/* Content Below Image */}
                 <div className="p-6">
                   <p className="text-sm text-primary font-semibold mb-2">
                     {project.date}
