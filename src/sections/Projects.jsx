@@ -33,13 +33,13 @@ const projects = [
     description:
       "A non-invasive cholesterol estimation system that uses hand imaging, feature extraction, and artificial neural networks to classify cholesterol levels in real time.",
     tags: ["Python", "ANN", "Kotlin", "Firebase", "Raspberry Pi"],
-    image: "/project5.png",
+    image: "//project5.png",
     link: "#",
     github: "#",
   },
   {
     title: "Waste Segregation and Composting System",
-    date: "May 2025",
+  
     description:
       "Built an AI-powered waste segregation system using ESP32-CAM and CNN for image-based classification and automated sorting of recyclable and organic waste.",
     tags: ["ESP32-CAM", "CNN", "Arduino", "Automation"],
@@ -49,7 +49,6 @@ const projects = [
   },
   {
     title: "Lost and Found System",
-    date: "May 2024",
     description:
       "Developed a web-based lost and found platform using Python, HTML, and CSS to simplify item reporting, searching, and recovery within the school community.",
     tags: ["Python", "HTML", "CSS", "MySQL"],
@@ -59,7 +58,6 @@ const projects = [
   },
   {
     title: "Ticketing System",
-    date: "May 2024",
     description:
       "Designed and implemented an online concert ticketing platform with user and admin dashboards, event management, cart functionality, and payment simulation.",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -69,17 +67,15 @@ const projects = [
   },
   {
     title: "Applicant Deployment System",
-    date: "December 2023",
     description:
       "Developed an applicant deployment system to automate registration, screening, and deployment processes through centralized and organized data management.",
     tags: [
-      "Java",
-      "Java Swing",
-      "AWT",
-      "JDBC",
-      "MySQL / SQLite",
-      "Apache NetBeans",
-    ],
+  "Java",
+  "Java Swing",
+  "AWT",
+  "MySQL ",
+
+],
     image: "/project1.png",
     link: "#",
     github: "#",
@@ -95,16 +91,15 @@ export const Projects = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
+        {/* Header */}
         <div className="max-w-3xl mb-16">
           <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase animate-fade-in">
             Featured Projects
           </span>
-
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground leading-tight animate-fade-in animation-delay-100">
             Projects built through innovation, research, and practical system
             development
           </h2>
-
           <p className="text-muted-foreground text-base md:text-lg animate-fade-in animation-delay-200">
             A collection of academic and technical projects that highlight my
             skills in AI, software development, embedded systems, database
@@ -112,7 +107,9 @@ export const Projects = () => {
           </p>
         </div>
 
+        {/* Featured Project */}
         <div className="grid lg:grid-cols-[1.35fr_1fr] rounded-[2rem] overflow-hidden border border-border bg-card shadow-sm">
+          {/* Left Showcase */}
           <div className="bg-card p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-border">
             <div className="flex flex-wrap gap-3 mb-5">
               <span className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2 text-xs font-bold uppercase tracking-[0.28em]">
@@ -136,11 +133,12 @@ export const Projects = () => {
               <img
                 src={featuredProject.image}
                 alt={featuredProject.title}
-                className="block w-full h-[520px] md:h-[620px] object-cover"
+                className="w-full h-[520px] md:h-[620px] object-cover"
               />
             </div>
           </div>
 
+          {/* Right Overview */}
           <div className="bg-card p-8 md:p-10">
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8">
               <Sparkles className="w-5 h-5" />
@@ -210,6 +208,7 @@ export const Projects = () => {
           </div>
         </div>
 
+        {/* Other Projects */}
         <div className="mt-20">
           <div className="mb-10">
             <p className="text-primary text-sm font-semibold tracking-[0.28em] uppercase mb-3">
@@ -224,15 +223,35 @@ export const Projects = () => {
             {projects.slice(1).map((project, idx) => (
               <div
                 key={idx}
-                className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="block w-full h-[280px] md:h-[320px] object-cover bg-muted"
-                  loading="lazy"
-                />
+                {/* Big Image */}
+                <div className="relative overflow-hidden rounded-b-none">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-80 md:h-96 object-contain bg-muted/30 p-2 transition-transform duration-500 group-hover:scale-[1.02]"
+  />
 
+  {/* dark gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+
+  {/* badge on top-left */}
+  <div className="absolute top-4 left-4">
+    <span className="inline-flex items-center rounded-full bg-sky-500 text-black px-4 py-2 text-[11px] font-bold uppercase tracking-[0.28em]">
+      Project
+    </span>
+  </div>
+
+  {/* title over image */}
+  <div className="absolute bottom-4 left-4 right-4">
+    <h4 className="text-white text-2xl md:text-3xl font-extrabold leading-tight drop-shadow-md">
+      {project.title}
+    </h4>
+  </div>
+</div>
+
+                {/* Content Below Image */}
                 <div className="p-6">
                   <p className="text-sm text-primary font-semibold mb-2">
                     {project.date}

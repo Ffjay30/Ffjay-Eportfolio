@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "School Email",
-    value: "Florenzjay.Francisco@my.jru.edu",
+    value: "Florenzjay.francisco@my.jru.edu",
     href: "mailto:Florenzjay.Francisco@my.jru.edu",
   },
   {
