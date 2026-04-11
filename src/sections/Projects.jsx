@@ -21,7 +21,7 @@ const featuredProject = {
     "Firebase",
     "Raspberry Pi",
   ],
-  image: "/projects/project5.png",
+  image: "/project5.png",
   link: "#",
   github: "#",
 };
@@ -33,7 +33,7 @@ const projects = [
     description:
       "A non-invasive cholesterol estimation system that uses hand imaging, feature extraction, and artificial neural networks to classify cholesterol levels in real time.",
     tags: ["Python", "ANN", "Kotlin", "Firebase", "Raspberry Pi"],
-    image: "/projects/project5.png",
+    image: "/project5.png",
     link: "#",
     github: "#",
   },
@@ -43,7 +43,7 @@ const projects = [
     description:
       "Built an AI-powered waste segregation system using ESP32-CAM and CNN for image-based classification and automated sorting of recyclable and organic waste.",
     tags: ["ESP32-CAM", "CNN", "Arduino", "Automation"],
-    image: "/projects/project4.png",
+    image: "/project4.png",
     link: "#",
     github: "#",
   },
@@ -53,7 +53,7 @@ const projects = [
     description:
       "Developed a web-based lost and found platform using Python, HTML, and CSS to simplify item reporting, searching, and recovery within the school community.",
     tags: ["Python", "HTML", "CSS", "MySQL"],
-    image: "/projects/project3.png",
+    image: "/project3.png",
     link: "#",
     github: "#",
   },
@@ -63,7 +63,7 @@ const projects = [
     description:
       "Designed and implemented an online concert ticketing platform with user and admin dashboards, event management, cart functionality, and payment simulation.",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    image: "/projects/project2.png",
+    image: "/project2.png",
     link: "#",
     github: "#",
   },
@@ -80,7 +80,7 @@ const projects = [
       "MySQL / SQLite",
       "Apache NetBeans",
     ],
-    image: "/projects/project1.png",
+    image: "/project1.png",
     link: "#",
     github: "#",
   },
