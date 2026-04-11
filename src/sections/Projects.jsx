@@ -233,7 +233,7 @@ export const Projects = () => {
   <img
     src={project.image}
     alt={project.title}
-    className="w-full h-72 md:h-80 object-contain bg-muted/30 p-2 transition-transform duration-500 group-hover:scale-[1.02]"
+    className="w-full h-72 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
   />
 
   {/* dark gradient overlay */}
