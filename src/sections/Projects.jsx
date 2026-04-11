@@ -95,7 +95,6 @@ export const Projects = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className="max-w-3xl mb-16">
           <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase animate-fade-in">
             Featured Projects
@@ -113,9 +112,7 @@ export const Projects = () => {
           </p>
         </div>
 
-        {/* Featured Project */}
         <div className="grid lg:grid-cols-[1.35fr_1fr] rounded-[2rem] overflow-hidden border border-border bg-card shadow-sm">
-          {/* Left Showcase */}
           <div className="bg-card p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-border">
             <div className="flex flex-wrap gap-3 mb-5">
               <span className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-5 py-2 text-xs font-bold uppercase tracking-[0.28em]">
@@ -144,7 +141,6 @@ export const Projects = () => {
             </div>
           </div>
 
-          {/* Right Overview */}
           <div className="bg-card p-8 md:p-10">
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8">
               <Sparkles className="w-5 h-5" />
@@ -214,7 +210,6 @@ export const Projects = () => {
           </div>
         </div>
 
-        {/* Other Projects */}
         <div className="mt-20">
           <div className="mb-10">
             <p className="text-primary text-sm font-semibold tracking-[0.28em] uppercase mb-3">
@@ -231,13 +226,12 @@ export const Projects = () => {
                 key={idx}
                 className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                <div className="overflow-hidden bg-muted">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="block w-full h-[280px] md:h-[320px] object-cover"
-                  />
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="block w-full h-[280px] md:h-[320px] object-cover bg-muted"
+                  loading="lazy"
+                />
 
                 <div className="p-6">
                   <p className="text-sm text-primary font-semibold mb-2">
