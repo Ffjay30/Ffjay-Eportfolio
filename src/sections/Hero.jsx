@@ -6,7 +6,9 @@ import {
   Code2,
   Brain,
   Briefcase,
+  GraduationCap,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const technicalSkills = [
@@ -36,7 +38,10 @@ const softSkills = [
 
 export const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-background">
+    <section
+      id="home"
+      className="relative min-h-screen overflow-hidden bg-background"
+    >
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-background" />
@@ -98,25 +103,33 @@ export const Hero = () => {
                 asChild
                 className="rounded-full px-7 h-14 text-base font-semibold bg-primary text-primary-foreground hover:bg-[var(--color-highlight)]"
               >
-                <a href="#projects">
-                    View Projects 
-                </a>
-                
+                <a href="#projects">View Projects</a>
               </Button>
 
-             <AnimatedBorderButton
-  asChild
-  className="rounded-full px-7 h-14 text-base font-semibold border border-primary/20 text-primary bg-card hover:bg-secondary"
->
-  <a
-    href="/Florenz_Jay_Francisco_Resume.pdf"
-    download="Florenz_Jay_Francisco_Resume.pdf"
-    className="flex items-center justify-center gap-2"
-  >
-    <Download className="w-5 h-5" />
-    Download Resume
-  </a>
-</AnimatedBorderButton>
+              <Button
+                size="lg"
+                asChild
+                className="rounded-full px-7 h-14 text-base font-semibold border border-primary/20 bg-secondary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+              >
+                <Link to="/school-journey" className="flex items-center gap-2">
+                  <GraduationCap className="w-5 h-5" />
+                  School Journey
+                </Link>
+              </Button>
+
+              <AnimatedBorderButton
+                asChild
+                className="rounded-full px-7 h-14 text-base font-semibold border border-primary/20 text-primary bg-card hover:bg-secondary"
+              >
+                <a
+                  href="/Florenz_Jay_Francisco_Resume.pdf"
+                  download="Florenz_Jay_Francisco_Resume.pdf"
+                  className="flex items-center justify-center gap-2"
+                >
+                  <Download className="w-5 h-5" />
+                  Download Resume
+                </a>
+              </AnimatedBorderButton>
 
               <a
                 href="#contact"
@@ -132,7 +145,9 @@ export const Hero = () => {
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary text-primary">
                   <Code2 className="w-5 h-5" />
                 </div>
-                <h3 className="text-3xl font-extrabold text-primary">10+</h3>
+                <h3 className="text-3xl font-extrabold text-primary">
+                  {technicalSkills.length}+
+                </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Technical Skills
                 </p>
@@ -142,7 +157,9 @@ export const Hero = () => {
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary text-primary">
                   <Brain className="w-5 h-5" />
                 </div>
-                <h3 className="text-3xl font-extrabold text-primary">6+</h3>
+                <h3 className="text-3xl font-extrabold text-primary">
+                  {softSkills.length}+
+                </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Soft Skills
                 </p>
